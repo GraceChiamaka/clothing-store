@@ -61,16 +61,28 @@
 }
 
 // BUTTON COMPONENT
-.btn-default {
+.btn {
 	height: 40px;
-	background: #000;
-	color: #fff;
 	border: none;
 	outline: none;
 	padding: 0.5rem 1rem;
 	text-transform: uppercase;
 	font-family: "Open Sans Condensed", sans-serif;
+	cursor: pointer;
+}
+.btn-default {
+	background: #000;
+	color: #fff;
 }
 .btn-block {
 	width: 100%;
+}
+.btn-primary {
+	background: #d0edf3;
+	color: #fff;
+}
+.btn-outline {
+	background: #fff;
+	border: 1px solid;
+	color: #000;
 }

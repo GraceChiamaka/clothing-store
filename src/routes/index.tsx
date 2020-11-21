@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Route, Switch, useParams } from "react-router-dom";
 import Header from "../components/common/Header";
-
+import { AppContext } from "../store/AppContext";
 import ContactPage from "../components/pages/Auth";
 import Homepage from "../components/pages/Homepage";
 import ShopPage from "../components/pages/Shop";
 
 const Routes = () => {
+	const { currentUser } = useContext(AppContext);
 	return (
 		<BrowserRouter>
-			<Header />
+			<Header user={currentUser} />
 			<Switch>
 				<Route exact path="/" key="homepage" component={Homepage} />,
 				<Route exact path="/shop" key="shop" component={ShopPage} />,

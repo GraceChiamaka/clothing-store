@@ -45,12 +45,12 @@ const initialDirectoryInfo: DirectoryInfo[] = [
 ];
 
 const Directory = () => {
-	const [directoryInfo, setDirectoryInfo] = useState(initialDirectoryInfo);
 	return (
 		<div className="directory-menu">
-			{directoryInfo.map((directory: DirectoryInfo) => {
+			{initialDirectoryInfo.map((directory: DirectoryInfo) => {
 				return (
 					<MenuItem
+						key={directory.id}
 						title={directory.title}
 						imageUrl={directory.imageUrl}
 						size={directory.size}

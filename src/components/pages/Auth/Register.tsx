@@ -47,6 +47,7 @@ const Register = () => {
 							title="Create Account"
 							variant="default"
 							type="submit"
+							onClick={handleRegister}
 							block
 						/>
 					</form>

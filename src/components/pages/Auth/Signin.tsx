@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Button from "../../common/Button";
 import Input from "../../common/Input";
+import { signInWithGoogle } from "../../../firebase/firebase.utils";
+
 export interface SignInProps {}
 
 const SignIn = () => {
@@ -10,10 +12,24 @@ const SignIn = () => {
 	const handleLogin = () => {};
 	const handlePasswordInput = (e: any) => setPassword(e.target.value);
 	const handleEmailInput = (e: any) => setEmail(e.target.value);
+
+	// const handleGoogleSignIn = () => {
+	// 	console.log("google auth");
+	// 	signInWithGoogle();
+	// };
 	return (
 		<div className="signin-content">
 			<div className="heading">
 				<p>Enter your login details to continue</p>
+
+				<Button
+					variant="outline"
+					className="google-btn"
+					type="button"
+					title="Sign In with Google"
+					block
+					onClick={signInWithGoogle}
+				/>
 				<form action="" onSubmit={handleLogin}>
 					<Input
 						type="email"
@@ -27,7 +43,13 @@ const SignIn = () => {
 						inputClass="signin-input"
 						onChange={handlePasswordInput}
 					/>
-					<Button title="Log In" variant="default" type="submit" block />
+					<Button
+						title="Log In"
+						variant="default"
+						type="submit"
+						block
+						onClick={handleLogin}
+					/>
 				</form>
 			</div>
 		</div>
