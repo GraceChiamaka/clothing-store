@@ -3,8 +3,6 @@ import { Tabs, Tab } from "../../common/Tabs";
 import Register from "./Register";
 import SignIn from "./Signin";
 
-interface ContactPageProps {}
-
 const ContactPage = () => {
 	const tabParam = "signin";
 	return (

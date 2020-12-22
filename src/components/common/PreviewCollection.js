@@ -1,23 +1,7 @@
 import React from "react";
 import CollectionItem from "./CollectionItem";
 
-interface CollectionItems {
-	id: number;
-	name: string;
-	imageUrl: string;
-	price: number;
-}
-
-export interface PreviewCollectionProps {
-	title: string;
-	items: CollectionItems[];
-}
-
-const PreviewCollection = (props: {
-	title: string;
-	items: CollectionItems[];
-}) => {
-	const { title, items } = props;
+const PreviewCollection = ({ title, items }) => {
 	return (
 		<div className="collection-preview">
 			<h1 className="title">{title.toUpperCase()}</h1>

@@ -1,14 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
-import { JsxElement } from "typescript";
-interface ButtonProps {
-	title: string | JsxElement;
-	type: "button" | "submit" | "reset";
-	variant: "primary" | "secondary" | "default" | "outline";
-	className?: string;
-	block?: boolean;
-	children?: any;
-	onClick: () => void;
-}
+import React from "react";
 
 const Button = ({
 	title,
@@ -19,7 +9,7 @@ const Button = ({
 	onClick,
 	children,
 	...props
-}: ButtonProps) => {
+}) => {
 	return (
 		<button
 			type={type}

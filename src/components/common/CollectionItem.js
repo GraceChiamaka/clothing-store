@@ -1,13 +1,6 @@
 import React from "react";
 
-export interface CollectionItemProps {
-	id: number;
-	name: string;
-	price: number;
-	imageUrl: string;
-}
-
-const CollectionItem = (props: CollectionItemProps) => {
+const CollectionItem = (props) => {
 	const { id, name, price, imageUrl } = props;
 	return (
 		<div className="collection-item">

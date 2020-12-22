@@ -1,19 +1,12 @@
 import React, { useState, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 
-interface TabProps {
-	contentClass?: string;
-	defaultTab?: string;
-	tabHeaderClass?: string;
-	children: any[];
-}
-
 const Tabs = ({
 	children,
 	defaultTab,
 	contentClass = "",
 	tabHeaderClass = "",
-}: TabProps) => {
+}) => {
 	const router = useHistory();
 
 	const queryTabExist = children.find(

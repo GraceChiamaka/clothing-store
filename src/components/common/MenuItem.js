@@ -1,15 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export interface MenuItemProps {
-	title: string;
-	imageUrl: string;
-	size?: string;
-	pageUrl: string;
-}
-
-const MenuItem = (props: MenuItemProps) => {
-	const { title, imageUrl, size, pageUrl } = props;
+const MenuItem = ({ title, imageUrl, size, pageUrl }) => {
 	return (
 		<div className={` ${size} menu-item`}>
 			<div

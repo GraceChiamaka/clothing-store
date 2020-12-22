@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import MenuItem from "./MenuItem";
 
-export interface DirectoryInfo {
-	title: string;
-	imageUrl: string;
-	id: number;
-	linkUrl: string;
-	size?: string;
-}
-
-const initialDirectoryInfo: DirectoryInfo[] = [
+const initialDirectoryInfo = [
 	{
 		title: "hats",
 		imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
@@ -47,7 +39,7 @@ const initialDirectoryInfo: DirectoryInfo[] = [
 const Directory = () => {
 	return (
 		<div className="directory-menu">
-			{initialDirectoryInfo.map((directory: DirectoryInfo) => {
+			{initialDirectoryInfo.map((directory) => {
 				return (
 					<MenuItem
 						key={directory.id}
