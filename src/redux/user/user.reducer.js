@@ -1,17 +1,13 @@
-export interface ActionProps {
-	type: string;
-	payload: any;
-}
-
+import { UserActionType } from "./user.types";
 const INITIAL_STATE = {
 	currentUser: null,
 };
-const userReducer = (state = INITIAL_STATE, action: ActionProps) => {
+const userReducer = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case "SET_CURRENT_USER":
+		case UserActionType.SET_CURRENT_USER:
 			return {
 				...state,
-				urrentUser: action.payload,
+				currentUser: action.payload,
 			};
 
 		default:
