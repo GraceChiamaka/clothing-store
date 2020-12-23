@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { selectCurrentUser } from "./redux/user/user.selectors";
 import { auth, createUser } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 import Routes from "./routes";
@@ -35,8 +35,8 @@ class App extends Component {
 	}
 }
 
-const mapStateToProps = ({ user }) => ({
-	currentUser: user.currentUser,
+const mapStateToProps = (state) => ({
+	currentUser: selectCurrentUser(state),
 });
 const mapDispatchToProps = (dispatch) => ({
 	setCurrentUser: (user) => dispatch(setCurrentUser(user)),
