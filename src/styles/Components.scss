@@ -69,6 +69,9 @@
 	text-transform: uppercase;
 	font-family: "Open Sans Condensed", sans-serif;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .btn-default {
 	background: #000;
@@ -85,6 +88,17 @@
 	background: #fff;
 	border: 1px solid;
 	color: #000;
+}
+
+.btn-inverted {
+	background: $white;
+	color: $black;
+	border: 1px solid $black;
+	&:hover {
+		background: $black;
+		color: $white;
+		border: none;
+	}
 }
 
 .cart-icon {

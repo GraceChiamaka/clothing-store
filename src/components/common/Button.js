@@ -4,6 +4,7 @@ const Button = ({
 	title,
 	type = "button",
 	variant = "default",
+	inverted,
 	className = "",
 	block = false,
 	onClick,
@@ -14,7 +15,10 @@ const Button = ({
 		<button
 			type={type}
 			className={
-				`btn btn-${variant} ` + (block ? "btn-block " : "") + className
+				`btn btn-${variant} ` +
+				(block ? "btn-block " : "") +
+				className +
+				(inverted && " btn-inverted")
 			}
 			{...props}
 			onClick={onClick}
